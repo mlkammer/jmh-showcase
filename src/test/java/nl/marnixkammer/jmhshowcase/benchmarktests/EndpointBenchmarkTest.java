@@ -1,5 +1,8 @@
-package nl.marnixkammer.jmhshowcase;
+package nl.marnixkammer.jmhshowcase.benchmarktests;
 
+import nl.marnixkammer.jmhshowcase.AlgorithmService;
+import nl.marnixkammer.jmhshowcase.CalculationEndpoint;
+import nl.marnixkammer.jmhshowcase.IdGenerator;
 import nl.marnixkammer.jmhshowcase.dto.InputDTO;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -11,7 +14,7 @@ public class EndpointBenchmarkTest extends AbstractBenchmarkTest {
     @Override
     protected void setupBenchmark() {
         endpoint = new CalculationEndpoint(new AlgorithmService(new IdGenerator()));
-        input = new InputDTO(2, 1.23, "MyReference");
+        input = new InputDTO(100, 1.23, "MyReference");
     }
 
     @Override

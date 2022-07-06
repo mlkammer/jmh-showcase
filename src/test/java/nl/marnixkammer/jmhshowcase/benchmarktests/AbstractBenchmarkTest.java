@@ -1,4 +1,4 @@
-package nl.marnixkammer.jmhshowcase;
+package nl.marnixkammer.jmhshowcase.benchmarktests;
 
 import org.junit.jupiter.api.Test;
 import org.openjdk.jmh.annotations.Benchmark;

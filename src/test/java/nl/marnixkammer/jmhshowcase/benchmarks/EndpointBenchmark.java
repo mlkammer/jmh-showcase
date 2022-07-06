@@ -1,5 +1,8 @@
-package nl.marnixkammer.jmhshowcase;
+package nl.marnixkammer.jmhshowcase.benchmarks;
 
+import nl.marnixkammer.jmhshowcase.AlgorithmService;
+import nl.marnixkammer.jmhshowcase.CalculationEndpoint;
+import nl.marnixkammer.jmhshowcase.IdGenerator;
 import nl.marnixkammer.jmhshowcase.dto.InputDTO;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
@@ -22,7 +25,7 @@ public class EndpointBenchmark {
 
     @Setup(Level.Trial)
     public final void setUpBenchmark() {
-        input = new InputDTO(2, 1.23, "MyReference");
+        input = new InputDTO(100, 1.23, "MyReference");
     }
 
     @Benchmark

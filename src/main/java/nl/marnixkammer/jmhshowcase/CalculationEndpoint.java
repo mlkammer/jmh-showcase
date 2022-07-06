@@ -7,15 +7,15 @@ import nl.marnixkammer.jmhshowcase.dto.ResultDTO;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
-class CalculationEndpoint {
+public class CalculationEndpoint {
 
     private final AlgorithmService algorithm;
 
-    CalculationEndpoint(final AlgorithmService algorithm) {
+    public CalculationEndpoint(final AlgorithmService algorithm) {
         this.algorithm = algorithm;
     }
 
-    String calculateJsonResult(final InputDTO input) {
+    public String calculateJsonResult(final InputDTO input) {
         final ResultDTO result = algorithm.calculate(input);
         return mapToJsonOutput(result);
     }

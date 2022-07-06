@@ -1,4 +1,4 @@
-package nl.marnixkammer.jmhshowcase;
+package nl.marnixkammer.jmhshowcase.benchmarks;
 
 import org.openjdk.jmh.profile.JavaFlightRecorderProfiler;
 import org.openjdk.jmh.results.format.ResultFormatType;

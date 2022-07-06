@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
-class AlgorithmService {
+public class AlgorithmService {
 
     private static final Logger LOGGER = Logger.getLogger(AlgorithmService.class.getName());
 
     private final IdGenerator idGenerator;
 
-    AlgorithmService(final IdGenerator idGenerator) {
+    public AlgorithmService(final IdGenerator idGenerator) {
         this.idGenerator = idGenerator;
     }
 
