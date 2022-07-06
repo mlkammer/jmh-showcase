@@ -3,7 +3,7 @@ package nl.marnixkammer.jmhshowcase;
 import nl.marnixkammer.jmhshowcase.dto.InputDTO;
 import org.openjdk.jmh.infra.Blackhole;
 
-public class EndpointBenchmarkTest extends AbstractBenchmark {
+public class EndpointBenchmarkTest extends AbstractBenchmarkTest {
 
     private CalculationEndpoint endpoint;
     private InputDTO input;

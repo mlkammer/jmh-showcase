@@ -11,34 +11,12 @@ import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
-import org.openjdk.jmh.profile.JavaFlightRecorderProfiler;
-import org.openjdk.jmh.results.format.ResultFormatType;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.RunnerException;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.util.stream.IntStream;
 
-import static java.lang.System.currentTimeMillis;
-
 @State(Scope.Benchmark)
-public class EndpointBenchmarkRunner {
+public class EndpointBenchmark {
 
-    public static void main(final String... args) throws RunnerException {
-        final String className = EndpointBenchmarkRunner.class.getSimpleName();
-        final Options options = new OptionsBuilder()
-                .include("\\." + className + "\\.")
-                .warmupForks(0)
-                .forks(0)
-                .threads(1)
-                .resultFormat(ResultFormatType.JSON)
-                .result("target/benchmark-results/" + (className + "_" + currentTimeMillis()) + ".json")
-                .addProfiler(JavaFlightRecorderProfiler.class, "dir=target/benchmark-results")
-                .build();
-
-        new Runner(options).run();
-    }
     private final CalculationEndpoint endpoint = new CalculationEndpoint(new AlgorithmService(new IdGenerator()));
     private InputDTO input;
 
