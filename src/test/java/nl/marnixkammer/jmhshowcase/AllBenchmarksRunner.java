@@ -14,7 +14,7 @@ final class AllBenchmarksRunner {
     public static void main(final String... args) throws RunnerException {
         final String className = AllBenchmarksRunner.class.getSimpleName();
         final Options options = new OptionsBuilder()
-                .include(".+Benchmark$")
+                .include(".+Benchmark\\..+$")
                 .warmupForks(0)
                 .forks(0)
                 .threads(1)

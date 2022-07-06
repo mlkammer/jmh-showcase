@@ -22,7 +22,7 @@ public class EndpointBenchmark {
 
     @Setup(Level.Trial)
     public final void setUpBenchmark() {
-        input = new InputDTO(1_000, 1.23, "MyReference");
+        input = new InputDTO(2, 1.23, "MyReference");
     }
 
     @Benchmark

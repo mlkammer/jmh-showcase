@@ -30,7 +30,7 @@ abstract class AbstractBenchmarkTest {
     void executeJmhRunner() throws RunnerException {
         final String className = getClass().getSimpleName();
         final Options options = new OptionsBuilder()
-                .include("\\." + className)
+                .include("\\." + className + "\\.")
                 .warmupForks(0)
                 .forks(0)
                 .threads(1)

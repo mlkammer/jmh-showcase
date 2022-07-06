@@ -11,7 +11,7 @@ public class EndpointBenchmarkTest extends AbstractBenchmarkTest {
     @Override
     protected void setupBenchmark() {
         endpoint = new CalculationEndpoint(new AlgorithmService(new IdGenerator()));
-        input = new InputDTO(1_000, 1.23, "MyReference");
+        input = new InputDTO(2, 1.23, "MyReference");
     }
 
     @Override
